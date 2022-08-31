@@ -1,0 +1,25 @@
+%Modiified bubble sort function definition 
+
+function [mcomparison] = mbubblesort(a,totalelements)
+
+mcomparison=0;
+mswap=0;
+%======================modified bubble sort============
+for i=1:totalelements-1
+    flag=0;
+    for j=1:totalelements-i
+        mcomparison=mcomparison+1;
+        if(a(j)>a(j+1))
+            flag=1;
+            temp=a(j);
+            a(j)=a(j+1);
+            a(j+1)=temp;
+            mswap=mswap+1;
+        end
+    end
+    if flag==0
+        break
+    end
+
+end
+end

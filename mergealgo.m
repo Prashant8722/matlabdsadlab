@@ -1,0 +1,56 @@
+function mergealgo(a,p,q,r)
+
+    n1=q-p+1;
+    n2=r-q;
+    L=zeros(1,n1+1);
+    R=zeros(1,n2+1);
+    
+    for i=1:n1
+        L(i)=a(p+i-1);
+    end
+    
+    for j=1:n2
+        R(j)=a(q+j);
+    end
+    L(n1+1)=Inf;
+    R(n2+1)=Inf;
+    L
+    R
+    i=1;
+    j=1;
+    compms=0;
+    for k=p:r
+        compms=compms+1;
+        if L(i)<=R(j)
+            a(k)=L(i);
+            i=i+1;
+        else
+            a(k)=R(j);
+            j=j+1;
+        end
+    end
+    compms
+end
+
+% function compms=mergealgo(a,x)
+% lena=length(a);
+% lenb=length(x);
+% b=[];
+% l=1;
+% i=1;midnext=1;
+%
+%     while i<=lena && midnext<=lenb
+%         if a(i)<a(midnext)
+%             b(l)=a(i);
+%             i=i+1;l=l+1;
+%         else
+%             b(l)=a(midnext);
+%             l=l+1;midnext=midnext+1;
+%         end
+%     end
+%     if midmext==lenb+1
+%       b = cat(2,b,x;)
+%     else
+%      b= cat(2,b,a);
+%     end;
+% end

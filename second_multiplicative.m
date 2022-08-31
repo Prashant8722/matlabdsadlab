@@ -1,0 +1,46 @@
+% Q.Write a program to find multiplicative inverse pair in zn.
+number=input('number');   %number is n
+num=number;
+
+% a=input('a');
+% b=input('b');
+% n=input('n');
+%==============Multiplicative Inverse of pair in Zn=========
+
+% if a>number
+%      a=mod(a,number);
+% end
+for i=0:number-1
+    for j=0:number-1
+        a=mod(i*j,number);
+    end
+end
+s1=0;
+s2=1;
+    r1=number;
+    r2=a;
+while r2~=0
+
+    q=int32(r1/r2);
+    r=mod(r1,r2);
+
+    s=s1-q*s2;
+    %t=t1-q*t2;
+    
+    s1=s2;
+    s2=s;
+    
+    r1=r2;
+    r2=r;
+
+end
+if s1<0 
+     s1=mod(s1,num);
+end
+s1;             %final multiplicative result
+
+
+
+
+
+

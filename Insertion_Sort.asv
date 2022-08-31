@@ -1,0 +1,8 @@
+%INSERTIION SORT
+
+    for i=2:totalelements
+        for j=i:2
+            comparisonis=comparisonis+1;
+            
+
+

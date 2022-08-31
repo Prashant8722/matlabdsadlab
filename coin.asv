@@ -1,0 +1,27 @@
+no_of_tosses=zeros(1,2000);
+no_of_head =zeros(1,2000);
+no_of_tail =zeros(1,2000);
+k=1;
+for initial=1:2000
+    for j= 1:initial
+        key_prob=rand(1,j);
+        avg_prob=mean(key_prob);
+        if round(avg_prob)
+            no_of_head(k)=avg_prob;
+            
+        else
+            no_of_tail(k)=avg_prob;
+            
+        end
+    end
+        no_of_tosses(k)=initial;
+        k=k+1;
+        
+end
+    figure(1)
+    plot(no_of_tosses,no_of_head,no_of_tosses,no_of_tail)
+    yline(0.5,'-g')
+    xlabel("no of times coin tossed")
+    ylabel("probability of getting Head")
+    title("Tossing the coin")
+    legend(',prob of head','prob of  tail')

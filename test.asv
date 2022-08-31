@@ -1,0 +1,43 @@
+% %test
+% % ax=zeros(1,20);
+% a=round(rand(1,20)*100);
+% ax=myms(a);
+% % a
+%  ax
+
+%% 
+% img=ones(256);
+% for i=1:256
+%    for j=1:256
+%      if rem(i+j,2)==0
+%          img(i,j) = 0;
+% %        a(i,:)=a(i-1,:)+1
+%      end
+%    end
+% end
+% imshow(img)
+
+%% 
+%  a=[2,8,7,1,3,5,16,15];
+%  n=quick_par(a,1,8)
+
+% %% 
+% a=[2,24,53,112,225,5,28,58,119,334];
+% mergealgo(a,1,5,10);
+
+%% 
+% function test1()
+%     global A;
+%     global B;
+%     x=5;
+%     B=x*A;
+% end
+%% 
+F=(0:1:250);
+C=temprature(F);
+plot(F,C,'-k');
+xlabel('Temprature(degree F)');
+ylabel('Temprature(degree C)');
+grid on;
+
+
